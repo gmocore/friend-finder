@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -56,4 +60,80 @@
 
 #snark {
   margin-top: 0.35em;
+}
+
+/* survey styles */
+
+.survey-container {
+  margin: 2em;
+}
+
+.page-title {
+  text-align: center;
+  background-color: grey;
+  color: aliceblue;
+  padding: 1em;
+  letter-spacing: 2px;
+  border-bottom: 2px solid black;
+}
+
+.details {
+  text-align: center;
+  padding: 2em;
+}
+
+/* .forms {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+} */
+
+.forms {
+  display: grid;
+  /* justify-items: center; */
+  grid-template-columns: repeat(auto-fill, minmax(25em, 2fr));
+  grid-gap: 2em;
+  padding: 2em;
+}
+
+.form-container {
+  justify-self: center;
+}
+
+.name-display {
+  text-align: center;
+  margin-bottom: 0.7em;
+}
+
+.question h3 {
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25em, 3fr));
+  grid-gap: 3em;
+  padding: 2em;
+  justify-items: center;
+  align-items: center;
+}
+
+.form-container > input {
+  width: 25em;
+  height: 2.5em;
+  padding: 0 0.7em 0 0.7em;
+  border-radius: 4px;
+  outline: none;
+  border: gray 1px solid;
+  font-size: 1.1em;
+}
+
+.input {
+  display: block;
+  width: 25em;
+  height: 2.5em;
+  padding: 0 0.7em 0 0.7em;
+  border-radius: 4px;
+  outline: none;
+  border: gray 1px solid;
+  font-size: 1.1em;
 }
