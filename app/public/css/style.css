@@ -82,6 +82,9 @@ body {
   padding: 2em;
 }
 
+.question {
+  margin-bottom: 2em;
+}
 /* .forms {
   display: flex;
   justify-content: space-around;
@@ -91,7 +94,7 @@ body {
 .forms {
   display: grid;
   /* justify-items: center; */
-  grid-template-columns: repeat(auto-fill, minmax(25em, 2fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(470px, 1fr)); */
   grid-gap: 2em;
   padding: 2em;
 }
@@ -110,7 +113,7 @@ body {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25em, 3fr));
+  grid-template-columns: repeat(auto-fit, minmax(25em, 3fr));
   grid-gap: 3em;
   padding: 2em;
   justify-items: center;
