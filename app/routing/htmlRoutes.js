@@ -1,6 +1,5 @@
-const express = require("express");
 const path = require("path");
-const router = express.Router();
+const router = require("express").Router();
 
 // GET route for survey.html
 
@@ -11,6 +10,10 @@ router.get("/", (request, response) => {
 
 router.get("/css/style.css", (request, response) => {
   response.sendFile(path.join(__dirname, "..", "public", "css", "style.css"));
+});
+
+router.get("/js/survey.js", (request, response) => {
+  response.sendFile(path.join(__dirname, "..", "public", "js", "survey.js"));
 });
 
 router.get("/survey", (request, response) => {
@@ -25,8 +28,10 @@ router.get("/survey", (request, response) => {
 //   response.send("post route for friends api endpoint");
 // });
 
-router.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, "..", "public", "404.html"));
+router.use((request, response, next) => {
+  response
+    .status(404)
+    .sendFile(path.join(__dirname, "..", "public", "404.html"));
 });
 //default catch all that routes to home.html
 

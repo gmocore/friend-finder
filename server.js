@@ -6,7 +6,8 @@ const app = express();
 
 const PORT = 3000;
 
-app.use(htmlRoutes, apiRoutes);
+app.use(htmlRoutes);
+app.use("/api/friends", apiRoutes);
 
 app.use(express.static(path.join(__dirname, "public")));
 

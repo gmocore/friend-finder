@@ -1,5 +1,4 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 
 // A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
 router.get("/api/friends", (request, response) => {
