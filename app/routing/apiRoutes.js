@@ -1,11 +1,11 @@
 const router = require("express").Router();
 
 // A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
-router.get("/api/friends", (request, response) => {
+router.get("/friends", (request, response) => {
   response.send("friends api endpoint");
 });
 
-router.post("/api/friends", (request, response) => {
+router.post("/friends", (request, response) => {
   response.send("post route for friends api endpoint");
 });
 
