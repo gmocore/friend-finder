@@ -8,3 +8,9 @@
 */
 
 // compare scores array to one another
+
+function Friend(name, photo, scores) {
+  this.name = name;
+  this.photo = photo;
+  this.scores = scores;
+}
