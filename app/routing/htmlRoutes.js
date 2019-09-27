@@ -3,7 +3,6 @@ const router = require("express").Router();
 
 // GET route for survey.html
 
-
 router.get("/css/style.css", (request, response) => {
   response.sendFile(path.join(__dirname, "..", "public", "css", "style.css"));
 });
@@ -21,6 +20,11 @@ router.get("/", (request, response) => {
   response.sendFile(path.join(__dirname, "..", "public", "home.html"));
 });
 
+router.use((request, response, next) => {
+  response
+    .status(404)
+    .sendFile(path.join(__dirname, "..", "public", "404.html"));
+});
 
 //default catch all that routes to home.html
 
