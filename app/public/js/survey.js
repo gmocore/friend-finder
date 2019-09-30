@@ -43,7 +43,6 @@ $("#submit").click(e => {
     ratings
   );
 
-  console.log(submission);
   resetInputs();
   postData(submission);
 });
@@ -55,8 +54,8 @@ function Friend(name, photo, scores) {
 }
 
 function postData(object) {
-  $.post("/api/friends", data => {
-    // console.log(object);
-    console.log(object.name);
+  $.post("/api/friends", object, data => {
+    console.log(object);
+    console.log(data);
   });
 }
