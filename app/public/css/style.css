@@ -161,4 +161,5 @@ select {
   font-size: 2em;
   letter-spacing: 4px;
   background-color: #363537;
+  cursor: pointer;
 }

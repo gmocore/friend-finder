@@ -4,21 +4,22 @@ const router = express.Router();
 
 const users = require("../data/friends");
 
-let userData = [];
 
 function compareUsers(current) {
-  console.log(current);
   users.forEach(user => {
-    console.log(user);
     let userChoices = user.choices.map((choice, i) => {
       return Math.abs(choice - current.scores[i]);
     });
 
     let totalDiff = userChoices.reduce((total, num) => total + num);
     console.log("total diff", totalDiff);
+    let maxDiff = 100;
+    let bestMatch;
 
-    if (totalDiff < 5) {
-      console.log("match", user.name);
+    if (totalDiff < maxDiff) {
+      bestMatch = user;
+      maxDiff = totalDiff;
+      console.log("best match: ", bestMatch);
     }
   });
 }
@@ -32,12 +33,10 @@ router.get("/friends", (request, response) => {
 router.post("/friends", (request, response) => {
   //   console.log("post route for friends api endpoint");
   let newUser = request.body;
-  userData.push(newUser);
   compareUsers(newUser);
 
-  // response.send("post routed");
-  console.log(request.body);
-  response.send(userData);
+  
+  response.send(newUser);
 });
 
 // A POST route /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
