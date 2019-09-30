@@ -14,6 +14,11 @@ body {
   padding: 2em;
 }
 
+.landing-container {
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+
 .header {
   background-color: gray;
   padding: 2em;
@@ -70,11 +75,12 @@ body {
 
 .page-title {
   text-align: center;
-  background-color: grey;
+  background-color: #363537;
   color: aliceblue;
   padding: 1em;
   letter-spacing: 2px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #706c61;
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
 .details {
@@ -130,6 +136,11 @@ body {
   font-size: 1.1em;
 }
 
+input,
+select {
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
 .input {
   display: block;
   width: 25em;
@@ -139,4 +150,15 @@ body {
   outline: none;
   border: gray 1px solid;
   font-size: 1.1em;
+}
+
+#submit {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  width: 100%;
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.25);
+  font-size: 2em;
+  letter-spacing: 4px;
+  background-color: #363537;
 }

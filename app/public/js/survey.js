@@ -34,7 +34,8 @@ $("#submit").click(e => {
   ratings.push(
     $("#question-one").val(),
     $("#question-two").val(),
-    $("#question-three").val()
+    $("#question-three").val(),
+    $("#question-four").val()
   );
 
   let submission = new Friend(
@@ -55,7 +56,6 @@ function Friend(name, photo, scores) {
 
 function postData(object) {
   $.post("/api/friends", object, data => {
-    console.log(object);
     console.log(data);
   });
 }
