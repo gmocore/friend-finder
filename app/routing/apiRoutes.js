@@ -4,7 +4,6 @@ const router = express.Router();
 
 const users = require("../data/friends");
 
-
 function compareUsers(current) {
   users.forEach(user => {
     let userChoices = user.choices.map((choice, i) => {
@@ -21,7 +20,10 @@ function compareUsers(current) {
       maxDiff = totalDiff;
       console.log("best match: ", bestMatch);
     }
+    return bestMatch;
   });
+  users.push(current);
+  console.log(users);
 }
 
 // A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
@@ -33,10 +35,9 @@ router.get("/friends", (request, response) => {
 router.post("/friends", (request, response) => {
   //   console.log("post route for friends api endpoint");
   let newUser = request.body;
-  compareUsers(newUser);
+  let match = compareUsers(newUser);
 
-  
-  response.send(newUser);
+  response.json(match);
 });
 
 // A POST route /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
