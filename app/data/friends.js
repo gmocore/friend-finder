@@ -7,7 +7,7 @@
     }
 */
 
-// compare scores array to one another
+// data acts as fake db for app
 
 let users = [
   {

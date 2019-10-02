@@ -1,7 +1,7 @@
 const path = require("path");
 const router = require("express").Router();
 
-// GET route for survey.html
+// routes for all files needed from server
 
 router.get("/css/style.css", (request, response) => {
   response.sendFile(path.join(__dirname, "..", "public", "css", "style.css"));
@@ -25,7 +25,5 @@ router.use((request, response, next) => {
     .status(404)
     .sendFile(path.join(__dirname, "..", "public", "404.html"));
 });
-
-//default catch all that routes to home.html
 
 module.exports = router;
