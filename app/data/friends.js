@@ -7,7 +7,7 @@
     }
 */
 
-// compare scores array to one another
+// data to be used to display match to user, and act as the database while the application is running
 
 let users = [
   {
