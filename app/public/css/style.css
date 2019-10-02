@@ -5,9 +5,10 @@
 
 body {
   font-family: "Merriweather Sans", sans-serif;
-  background: url("https://images.pexels.com/photos/220066/pexels-photo-220066.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background: url("https://images.pexels.com/photos/207129/pexels-photo-207129.jpeg?cs=srgb&dl=adult-art-black-and-white-207129.jpg&fm=jpg")
+    no-repeat center center fixed;
   background-size: cover;
-  color: #f8f4e3;
+  color: aliceblue;
   text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
 }
 
@@ -25,10 +26,10 @@ body {
 
 .header {
   background-color: #363537;
-  color: #f8f4e3;
   padding: 2em;
   display: flex;
   justify-content: center;
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
 .header-title {
@@ -41,7 +42,6 @@ body {
   display: flex;
   justify-content: center;
   background-color: #2d3047;
-  color: #f8f4e3;
   padding: 1em;
   line-height: 2.5em;
   border-radius: 2px;
@@ -57,6 +57,7 @@ body {
 
 .sub-text {
   font-size: 2em;
+  font-weight: 100;
 }
 
 .button-container {
@@ -69,9 +70,18 @@ body {
   outline: none;
   border: 1px solid #706c61;
   text-decoration: none;
-  color: aliceblue;
+  letter-spacing: 1.2px;
   background-color: gray;
+  color: aliceblue;
+  cursor: pointer;
   font-size: 1em;
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+
+.button:hover {
+  box-shadow: none;
+  border: #b4ceb3 1px solid;
 }
 
 #snark {
@@ -87,7 +97,6 @@ body {
 .page-title {
   text-align: center;
   background-color: #363537;
-  color: aliceblue;
   padding: 1em;
   letter-spacing: 2px;
   border-bottom: 2px solid #706c61;
@@ -102,11 +111,10 @@ body {
 .question {
   margin-bottom: 2em;
 }
-/* .forms {
-  display: flex;
-  justify-content: space-around;
-  padding: 2em;
-} */
+
+.question > h3 {
+  padding: 0.3em;
+}
 
 .forms {
   display: grid;
@@ -127,6 +135,8 @@ body {
 
 .question h3 {
   text-align: center;
+  font-weight: 100;
+  font-size: 1.2em;
 }
 .grid-container {
   display: grid;
@@ -152,6 +162,11 @@ select {
   box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
+select {
+  background-color: #706c61;
+  color: aliceblue;
+}
+
 .input {
   display: block;
   width: 25em;
@@ -159,8 +174,14 @@ select {
   padding: 0 0.7em 0 0.7em;
   border-radius: 4px;
   outline: none;
-  border: gray 1px solid;
+  border: gray 2px solid;
   font-size: 1.1em;
+  transition: 0.5s;
+}
+
+.input:hover {
+  border: #b4ceb3 2px solid;
+  box-shadow: none;
 }
 
 #submit {
@@ -172,7 +193,16 @@ select {
   font-size: 2em;
   letter-spacing: 4px;
   background-color: #363537;
+  color: aliceblue;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+#submit:hover {
+  border: #b4ceb3 1px solid;
+  color: #b4ceb3;
+  letter-spacing: 2px;
+  box-shadow: none;
 }
 
 /* modal */
@@ -235,4 +265,38 @@ select {
   justify-content: center;
   align-items: center;
   padding: 1.3em;
+}
+
+/* 404 styles */
+main {
+  margin: 5em;
+  text-align: center;
+}
+
+.info {
+  margin-bottom: 2em;
+}
+
+.links {
+  text-align: center;
+}
+
+.link {
+  color: blue;
+  font-size: 1.5em;
+  transition: 0.5s;
+  text-shadow: none;
+}
+
+.link:hover {
+  color: aliceblue;
+  letter-spacing: 2px;
+}
+
+.api-link {
+  margin: 1.2em;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  text-shadow: none;
 }

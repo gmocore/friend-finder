@@ -20,6 +20,7 @@ function resetInputs() {
 $("#submit").click(e => {
   if ($(".input").val() === "" || $(".user-input").val() === "") {
     $("#error-modal").fadeIn("slow");
+    setTimeout(() => closeModal(), 1500);
   } else {
     let ratings = [];
     //   ratings.push(q1.value, q2.value, q3.value);
