@@ -1,11 +1,12 @@
-// npm/app variables
+// application and module variables
 const express = require("express");
 const app = express();
 const router = express.Router();
 
-// reference to user data
+//import data from friends.js
 const users = require("../data/friends");
 
+// compare user scores
 function compareUsers(current) {
   // starts vars to compare users
   let maxDiff = 100;
@@ -31,6 +32,7 @@ function compareUsers(current) {
   // push new user to user data array
   users.push(current);
 
+  // best match overall
   return bestMatch || "no match found";
 }
 
@@ -41,6 +43,7 @@ router.get("/friends", (request, response) => {
   return response.json(users);
 });
 
+//   posts new users to api-friends
 router.post("/friends", (request, response) => {
   // set request body to new user to compare
   let newUser = request.body;

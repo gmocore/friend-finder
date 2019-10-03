@@ -7,6 +7,7 @@ function Friend(name, photo, scores) {
   this.scores = scores;
 }
 
+// submit button for survey
 $("#submit").click(e => {
   // validate if survey has been filled out
   if ($(".input").val() === "" || $(".user-input").val() === "") {
@@ -55,6 +56,7 @@ function postData(object) {
 
 // modal interactivity
 $(".close-btn").click(closeModal);
+// close modal if clicked outside of modal
 $(window).click(outsideClick);
 
 // display api data in modal

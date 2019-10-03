@@ -1,3 +1,4 @@
+// npm variables
 const path = require("path");
 const router = require("express").Router();
 
@@ -16,7 +17,6 @@ router.get("/survey", (request, response) => {
 });
 
 router.get("/", (request, response) => {
-  //   response.send("this is the main page");
   response.sendFile(path.join(__dirname, "..", "public", "home.html"));
 });
 
